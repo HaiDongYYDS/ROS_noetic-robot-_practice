@@ -1,5 +1,5 @@
 # SmartCar
-#author:mahaidong
+#author:Sea of horse
 #date:2024/04/21
 #email:2042312865@qq.com
 
@@ -32,7 +32,6 @@ Tested on Ubuntu 20.04
 \```bash
 
 ***source devel/setup.bash***
-
 
 \```
 
