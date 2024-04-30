@@ -1,0 +1,8 @@
+<launch>
+
+     <!-- 运行跟踪运动节点 -->
+    <node name="control" pkg="mbot_gazebo" type="control.py" ></node> 
+
+    <!-- 运行8字运动节点 -->
+    <node name="plan" pkg="mbot_gazebo" type="plan.py" ></node> 
+ </launch>

@@ -1,0 +1,13 @@
+digraph G {
+"base_footprint1" -> "base_link1"[label="Broadcaster: /mbot1/robot_state_publisher\nAverage rate: 10000.000 Hz\nMost recent transform: 0.000 ( 163.421 sec old)\nBuffer length: 0.000 sec\n"];
+"odom" -> "base_footprint1"[label="Broadcaster: /gazebo\nAverage rate: 10.204 Hz\nMost recent transform: 163.373 ( 0.048 sec old)\nBuffer length: 4.900 sec\n"];
+"base_link1" -> "imu_link"[label="Broadcaster: /mbot1/robot_state_publisher\nAverage rate: 10000.000 Hz\nMost recent transform: 0.000 ( 163.421 sec old)\nBuffer length: 0.000 sec\n"];
+"base_footprint2" -> "base_link2"[label="Broadcaster: /mbot2/robot_state_publisher\nAverage rate: 10000.000 Hz\nMost recent transform: 0.000 ( 163.421 sec old)\nBuffer length: 0.000 sec\n"];
+"odom" -> "base_footprint2"[label="Broadcaster: /gazebo\nAverage rate: 10.204 Hz\nMost recent transform: 163.372 ( 0.049 sec old)\nBuffer length: 4.900 sec\n"];
+"base_link2" -> "kinect_link"[label="Broadcaster: /mbot2/robot_state_publisher\nAverage rate: 10000.000 Hz\nMost recent transform: 0.000 ( 163.421 sec old)\nBuffer length: 0.000 sec\n"];
+"kinect_link" -> "kinect_frame_optical"[label="Broadcaster: /mbot2/robot_state_publisher\nAverage rate: 10000.000 Hz\nMost recent transform: 0.000 ( 163.421 sec old)\nBuffer length: 0.000 sec\n"];
+edge [style=invis];
+ subgraph cluster_legend { style=bold; color=black; label ="view_frames Result";
+"Recorded at time: 163.421"[ shape=plaintext ] ;
+ }->"odom";
+}

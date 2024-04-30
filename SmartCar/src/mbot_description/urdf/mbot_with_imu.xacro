@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<robot name="mbot1" xmlns:xacro="http://www.ros.org/wiki/xacro">
+<xacro:include filename="$(find mbot_description)/urdf/mbot_base_gazebo.xacro" />
+<xacro:include filename="$(find mbot_description)/urdf/sensors/imu_gazebo.xacro" />
+
+<!-- 预定义的 imu 位置向量定义如下： -->
+
+<xacro:property name="imu_offset_x" value="0" />
+<xacro:property name="imu_offset_y" value="0" />
+<xacro:property name="imu_offset_z" value="0.1" />
+
+<!-- 将各个传感器添加到 mbot 机器人上 -->
+
+<joint name="imu_joint" type="fixed">
+<origin xyz="${imu_offset_x} ${imu_offset_y} ${imu_offset_z}" rpy="0 0 0" />
+<parent link="base_link"/>
+<child link="imu_link"/>
+</joint>
+
+<!-- 最后通过预定义的宏添加各个传感器： -->
+<xacro:imu prefix="imu"/>
+
+<xacro:mbot_base_gazebo/>
+
+</robot>
